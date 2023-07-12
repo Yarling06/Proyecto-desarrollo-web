@@ -1,0 +1,81 @@
+.hidden {
+  display: none;
+}
+
+.div-imagen-fondo {
+  background-image: url(/imagenes/rojo.png);
+
+  
+ background-size: 1500px;
+ background-repeat: no-repeat;
+        
+}
+
+.comentarios {
+  border-top: 1px solid #ddd;
+  margin-top: 20px;
+  padding-top: 20px;
+}
+
+.comentarios h2 {
+  margin-bottom: 10px;
+}
+
+.comentarios ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.comentarios li {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.comentarios .nombre-usuario {
+  font-weight: bold;
+}
+
+.comentarios .tema {
+  font-weight: bold;
+  color: #555;
+}
+
+.comentarios .comentario {
+  margin-top: 5px;
+}
+
+/* Nuevos estilos para la solicitud de cita */
+
+.nuevo-tema {
+  margin-bottom: 20px;
+}
+
+#solicitudCitaForm {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#solicitudCitaForm label {
+  font-weight: bold;
+}
+
+#solicitudCitaForm input[type="text"],
+#solicitudCitaForm textarea {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+#solicitudCitaForm button[type="submit"] {
+  padding: 5px 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#solicitudCitaForm button[type="submit"]:hover {
+  background-color: #45a049;
+}
