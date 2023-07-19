@@ -36,4 +36,3 @@ class CalculadoraImc {
 
 const calculadora = new CalculadoraImc();
 
-//prueba para ver si sirve 

@@ -1,22 +1,14 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Salud Online</title>
-    <link href="css/menu.css" rel="stylesheet" type="text/css"/>
-    <link href="css/imc.css" rel="stylesheet" type="text/css"/>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body "<div class="div-imagen-fondo">
-    <ul class="nav-menu">
-        <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="index.html">Home</a></li>
-        <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="imc.html">IMC</a></li>
-        <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="recetas.html">Recetas Saludables</a></li>
-        <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="cita.html">Solicitar cita</a></li>
-        <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="foro.html">Foro</a></li>
-        <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="contacto.html">Contacto</a></li>
-    </ul>
-
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org" >
+    <head th:replace="layout/plantilla :: head">
+        <title>Inicio</title>
+    </head>
+    <body "<div class="div-imagen-fondo">
+        
+        <header th:replace="layout/plantilla :: header">
+        </header>
+        
     <h1>Calculadora de IMC</h1>
     <div class="container">
         <label for="peso">Peso (kg):</label>
