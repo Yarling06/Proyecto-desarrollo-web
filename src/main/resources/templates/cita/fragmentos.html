@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+    <head th:replace="~{layout/plantilla :: head}">
+        <title>TechShop - Solicitar cita</title>
+    </head>
+    <body>
+        <ul class="nav-menu">
+            <!-- Agrega los enlaces de navegación a otras páginas si es necesario -->
+        </ul>
+
+        <div class="container">
+            <div class="row">
+                <!-- Lado izquierdo: Usuario y comentarios -->
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>Usuario y Comentarios</h4>
+                        </div>
+                        <div class="card-body">
+                            <form th:action="@{/cita/solicitar}" method="POST">
+                                <div class="mb-3">
+                                    <label for="usuario">Usuario</label>
+                                    <input type="text" class="form-control" name="usuario" required="true">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="comentarios">Comentarios</label>
+                                    <textarea class="form-control" name="comentarios" rows="5"></textarea>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lado derecho: Detalles de la cita -->
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>Detalles de la Cita</h4>
+                        </div>
+                        <div class="card-body">
+                            <form th:action="@{/cita/solicitar}" method="POST">
+                                <div class="mb-3">
+                                    <label for="asunto">Asunto</label>
+                                    <input type="text" class="form-control" name="asunto" required="true">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="telefono">Teléfono</label>
+                                    <input type="text" class="form-control" name="telefono" required="true">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="especialista">Especialista Disponible</label>
+                                    <select class="form-control" name="especialista">
+                                        <option value="especialista1">Especialista 1</option>
+                                        <option value="especialista2">Especialista 2</option>
+                                        <!-- Agrega más opciones según tus especialistas disponibles -->
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="fecha">Fecha</label>
+                                    <input type="date" class="form-control" name="fecha" required="true">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="hora">Hora</label>
+                                    <input type="time" class="form-control" name="hora" required="true">
+                                </div>
+                                <button type="submit" class="btn btn-primary">Solicitar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
