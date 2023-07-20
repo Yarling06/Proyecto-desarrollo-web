@@ -1,37 +1,50 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org" >
+    <link href="css/imc.css" rel="stylesheet" type="text/css"/>
+    <link href="css/menu.css" rel="stylesheet" type="text/css"/>
     <head th:replace="layout/plantilla :: head">
+
         <title>Inicio</title>
+        <title>Salud Online</title>
+        <ul class="nav-menu">
+            <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="index.html">Home</a></li>
+            <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="imc.html">IMC</a></li>
+            <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="recetas.html">Recetas Saludables</a></li>
+            <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="cita.html">Solicitar cita</a></li>
+            <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="foro.html">Foro</a></li>
+            <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="contacto.html">Contacto</a></li>
+        </ul>
+
     </head>
     <body "<div class="div-imagen-fondo">
-        
+
         <header th:replace="layout/plantilla :: header">
         </header>
-        
-    <h1>Calculadora de IMC</h1>
-    <div class="container">
-        <label for="peso">Peso (kg):</label>
-        <input type="number" id="peso" placeholder="Ingrese su peso">
 
-        <label for="altura">Altura (cm):</label>
-        <input type="number" id="altura" placeholder="Ingrese su altura">
+        <h1>Calculadora de IMC</h1>
+        <div class="container">
+            <label for="peso">Peso (kg):</label>
+            <input type="number" id="peso" placeholder="Ingrese su peso">
 
-        <button id="btn_calcular">Calcular</button>
+                <label for="altura">Altura (cm):</label>
+                <input type="number" id="altura" placeholder="Ingrese su altura">
 
-        <div id="resultado"></div>
-    </div>
+                    <button id="btn_calcular">Calcular</button>
 
-    <script>
-        function calcularIMC() {
-            var peso = document.getElementById('peso').value;
-            var altura = document.getElementById('altura').value / 100; // Convertir a metros
-            var imc = peso / (altura * altura);
-            var resultadoElement = document.getElementById('resultado');
-            resultadoElement.innerHTML = 'Tu IMC es: ' + imc.toFixed(2);
-        }
+                    <div id="resultado"></div>
+                    </div>
 
-        document.getElementById('btn_calcular').addEventListener('click', calcularIMC);
-    </script>
-</body>
-</html>
+                    <script>
+                        function calcularIMC() {
+                            var peso = document.getElementById('peso').value;
+                            var altura = document.getElementById('altura').value / 100; // Convertir a metros
+                            var imc = peso / (altura * altura);
+                            var resultadoElement = document.getElementById('resultado');
+                            resultadoElement.innerHTML = 'Tu IMC es: ' + imc.toFixed(2);
+                        }
+
+                        document.getElementById('btn_calcular').addEventListener('click', calcularIMC);
+                    </script>
+                    </body>
+                    </html>

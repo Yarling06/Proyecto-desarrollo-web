@@ -1,81 +1,58 @@
-.hidden {
-  display: none;
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ff3c3c; /* Fondo rojo */
+    color: #000000; /* Texto negro */
 }
 
-.div-imagen-fondo {
-  background-image: url(/imagenes/rojo.png);
-
-  
- background-size: 1500px;
- background-repeat: no-repeat;
-        
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.comentarios {
-  border-top: 1px solid #ddd;
-  margin-top: 20px;
-  padding-top: 20px;
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.comentarios h2 {
-  margin-bottom: 10px;
+.forum-form {
+    display: flex;
+    flex-direction: column;
 }
 
-.comentarios ul {
-  list-style-type: none;
-  padding: 0;
+.form-group {
+    margin-bottom: 20px;
 }
 
-.comentarios li {
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 10px;
-  margin-bottom: 10px;
+label {
+    margin-bottom: 5px;
 }
 
-.comentarios .nombre-usuario {
-  font-weight: bold;
+input,
+textarea {
+    padding: 15px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
 }
 
-.comentarios .tema {
-  font-weight: bold;
-  color: #555;
+textarea {
+    resize: vertical;
 }
 
-.comentarios .comentario {
-  margin-top: 5px;
+button {
+    padding: 10px 10px;
+    background-color: #000000; /* Fondo negro */
+    color: #ffffff; /* Texto blanco */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-/* Nuevos estilos para la solicitud de cita */
-
-.nuevo-tema {
-  margin-bottom: 20px;
-}
-
-#solicitudCitaForm {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-#solicitudCitaForm label {
-  font-weight: bold;
-}
-
-#solicitudCitaForm input[type="text"],
-#solicitudCitaForm textarea {
-  width: 100%;
-  padding: 5px;
-  margin-bottom: 10px;
-}
-
-#solicitudCitaForm button[type="submit"] {
-  padding: 5px 10px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-#solicitudCitaForm button[type="submit"]:hover {
-  background-color: #45a049;
+button:hover {
+    background-color: #333333; /* Fondo gris oscuro al pasar el ratón */
 }

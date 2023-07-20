@@ -1,90 +1,58 @@
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 20px;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ff3c3c; /* Fondo rojo */
+    color: #000000; /* Texto negro */
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 h1 {
-  text-align: center;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.nuevo-tema {
-  margin-bottom: 20px;
+.forum-form {
+    display: flex;
+    flex-direction: column;
 }
 
-h2 {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+.form-group {
+    margin-bottom: 20px;
 }
 
 label {
-  font-weight: bold;
+    margin-bottom: 5px;
 }
 
-input[type="text"],
+input,
 textarea {
-  width: 100%;
-  padding: 5px;
-  margin-bottom: 10px;
+    padding: 15px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
 }
 
-button[type="submit"] {
-  padding: 5px 10px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  cursor: pointer;
+textarea {
+    resize: vertical;
 }
 
-button[type="submit"]:hover {
-  background-color: #45a049;
+button {
+    padding: 10px 10px;
+    background-color: #000000; /* Fondo negro */
+    color: #ffffff; /* Texto blanco */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.comentarios {
-  border-top: 1px solid #ddd;
-  margin-top: 20px;
-  padding-top: 20px;
-}
-
-.comentarios h2 {
-  margin-bottom: 10px;
-}
-
-.comentarios ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.comentarios li {
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 10px;
-  margin-bottom: 10px;
-}
-
-.comentarios .nombre-usuario {
-  font-weight: bold;
-}
-
-.comentarios .tema {
-  font-weight: bold;
-  color: #555;
-}
-
-.comentarios .comentario {
-  margin-top: 5px;
-}
-
-.div-imagen-fondo {
-  background-image: url(/imagenes/rojo.png);
-
-  
- background-size: 1500px;
- background-repeat: no-repeat;
-        
+button:hover {
+    background-color: #333333; /* Fondo gris oscuro al pasar el ratón */
 }
