@@ -1,14 +1,13 @@
 .div-imagen-fondo {
-    background-image: url(/imagenes/recetas.png);
-    background-size: cover;
+    background-image: url(/imagenes/ejercicios.jpg);
+    background-size: cover; 
     background-repeat: no-repeat;
 }
-
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #f9f9f9; /* Fondo gris claro */
+    background-color: #f9f9f9; /*
     color: #333333; /* Texto gris oscuro */
 }
 
@@ -23,7 +22,7 @@ h1 {
     margin-bottom: 20px;
 }
 
-.recipe-button {
+.routine-button {
     display: block;
     width: 150px;
     margin: 10px auto;
@@ -35,11 +34,11 @@ h1 {
     cursor: pointer;
 }
 
-.recipe-button:hover {
-    background-color: #45a049; /* Fondo verde oscuro al pasar el ratón */
+.routine-button:hover {
+    background-color: #45a049; /* Fondo verde oscuro  */
 }
 
-.recipe-content {
+.routine-content {
     display: none;
     margin-top: 20px;
     padding: 10px;
@@ -48,15 +47,15 @@ h1 {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.recipe-content h2 {
+.routine-content h2 {
     margin-bottom: 10px;
 }
 
-.recipe-content h3 {
+.routine-content h3 {
     margin-bottom: 5px;
 }
 
-.recipe-content ul,
-.recipe-content ol {
+.routine-content ul,
+.routine-content ol {
     margin-left: 20px;
 }
