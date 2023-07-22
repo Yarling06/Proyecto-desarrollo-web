@@ -1,10 +1,11 @@
-function showRecipe(recipeName) {
-    const recipeContents = document.querySelectorAll(".recipe-content");
+function showRecipe(recipeType) {
+    // Oculta todos los contenidos de las recetas
+    var recipeContents = document.getElementsByClassName("recipe-content");
+    for (var i = 0; i < recipeContents.length; i++) {
+        recipeContents[i].style.display = "none";
+    }
 
-    recipeContents.forEach(content => {
-        content.style.display = "none";
-    });
-
-    const selectedRecipe = document.getElementById(recipeName);
-    selectedRecipe.style.display = "block";
+    // Muestra el contenido de la receta seleccionada
+    var recipeToShow = document.getElementById(recipeType);
+    recipeToShow.style.display = "block";
 }

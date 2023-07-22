@@ -3,7 +3,6 @@
       xmlns:th="http://www.thymeleaf.org" >
     <link href="css/imc.css" rel="stylesheet" type="text/css"/>
     <link href="css/menu.css" rel="stylesheet" type="text/css"/>
-    <head th:replace="layout/plantilla :: head">
         <title>Salud Online</title>  
         <ul class="nav-menu">
             <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="index.html">Home</a></li>
@@ -16,9 +15,6 @@
         </ul>
     </head>
     <body "<div class="div-imagen-fondo">
-
-        <header th:replace="layout/plantilla :: header">
-        </header>
 
         <h1>Calculadora de IMC</h1>
         <div class="container">
@@ -33,16 +29,6 @@
                     <div id="resultado"></div>
                     </div>
 
-                    <script>
-                        function calcularIMC() {
-                            var peso = document.getElementById('peso').value;
-                            var altura = document.getElementById('altura').value / 100; // Convertir a metros
-                            var imc = peso / (altura * altura);
-                            var resultadoElement = document.getElementById('resultado');
-                            resultadoElement.innerHTML = 'Tu IMC es: ' + imc.toFixed(2);
-                        }
-
-                        document.getElementById('btn_calcular').addEventListener('click', calcularIMC);
-                    </script>
+                    <script src="js/CalculadoraImc.js" type="text/javascript"></script>
                     </body>
                     </html>

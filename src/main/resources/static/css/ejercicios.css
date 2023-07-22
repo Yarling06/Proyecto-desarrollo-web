@@ -1,13 +1,13 @@
 .div-imagen-fondo {
     background-image: url(/imagenes/ejercicios.jpg);
-    background-size: cover; 
+    background-size: cover;
     background-repeat: no-repeat;
 }
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #f9f9f9; /*
+    background-color: #f9f9f9; /* Fondo gris claro */
     color: #333333; /* Texto gris oscuro */
 }
 
@@ -15,6 +15,9 @@ body {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
@@ -24,10 +27,10 @@ h1 {
 
 .routine-button {
     display: block;
-    width: 150px;
+    width: 100%;
     margin: 10px auto;
     padding: 10px;
-    background-color: #4CAF50; /* Fondo verde */
+    background-color: #8ebf3d; /* Fondo verde claro */
     color: #ffffff; /* Texto blanco */
     border: none;
     border-radius: 5px;
@@ -35,7 +38,7 @@ h1 {
 }
 
 .routine-button:hover {
-    background-color: #45a049; /* Fondo verde oscuro  */
+    background-color: #7aab34; /* Fondo verde claro al pasar el ratón */
 }
 
 .routine-content {
@@ -47,15 +50,58 @@ h1 {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.routine-content h2 {
+.video-section {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.video-section h2 {
+    text-align: center;
+}
+
+.video-section iframe {
+    display: block;
+    margin: 0 auto;
+}
+
+.buttons-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #c7e1b0; /* Fondo verde claro */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.content-item {
+    margin-top: 20px;
+}
+
+.food-list-section {
+    background-color: #8ebf3d; /* Fondo verde claro */
+    padding: 10px;
+    border-radius: 5px;
+    color: #ffffff; /* Texto blanco */
+}
+
+.food-list-section h2 {
+    text-align: center;
+}
+
+.food-list-container {
+    background-color: #ffffff; /* Fondo blanco */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.food-list-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.food-list-container li {
     margin-bottom: 10px;
-}
-
-.routine-content h3 {
-    margin-bottom: 5px;
-}
-
-.routine-content ul,
-.routine-content ol {
-    margin-left: 20px;
 }

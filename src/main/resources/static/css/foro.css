@@ -1,58 +1,53 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #ff3c3c; /* Fondo rojo */
-    color: #000000; /* Texto negro */
+
+.div-imagen-fondo{
+    background-image: url(/imagenes/rojo.png);
+    background-size: 1500px;
+    background-repeat: no-repeat;
+
 }
 
-.container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
+.form-container {
     background-color: #ffffff; /* Fondo blanco */
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
+.form-container h3 {
     text-align: center;
     margin-bottom: 20px;
 }
 
-.forum-form {
-    display: flex;
-    flex-direction: column;
+#comment-form label {
+    display: block;
+    margin-bottom: 10px;
 }
 
-.form-group {
-    margin-bottom: 20px;
-}
-
-label {
-    margin-bottom: 5px;
-}
-
-input,
-textarea {
+#submit-btn {
+    margin-top: 25px;
+    display: block;
+    width: 100%;
     padding: 15px;
-    border: 1px solid #cccccc;
-    border-radius: 5px;
-}
-
-textarea {
-    resize: vertical;
-}
-
-button {
-    padding: 10px 10px;
-    background-color: #000000; /* Fondo negro */
+    background-color: #4CAF50; /* Fondo verde */
     color: #ffffff; /* Texto blanco */
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
-button:hover {
-    background-color: #333333; /* Fondo gris oscuro al pasar el ratón */
+#submit-btn:hover {
+    background-color: #45a049; /* Fondo verde oscuro al pasar el ratón */
+}
+
+/* Estilos para ajustar los márgenes del contenedor y centrar elementos */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 25px;
+    text-align: center;
+}
+
+.social-icons {
+    text-align: center;
+    margin-top: 40px;
 }

@@ -12,6 +12,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     <body>
         <link href="css/menu.css" rel="stylesheet" type="text/css"/>
         <link href="css/cita.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
         <title>Salud Online</title>
         <ul class="nav-menu">
             <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="index.html">Home</a></li>
@@ -27,28 +30,44 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     </head>
 
 <body "<div class="div-imagen-fondo">
+        <div class="container">
+            <h1>Solicitar Cita</h1>
+            <form id="appointment-form">
+                <div class="form-group">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="reason">Motivo de la cita:</label>
+                    <input type="text" id="reason" name="reason" required>
+                </div>
+                <div class="form-group">
+                    <label for="preferred-date">Fecha de preferencia:</label>
+                    <input type="text" id="preferred-date" name="preferred-date" readonly required>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Solicitar Cita">
+                </div>
+            </form>
+        </div>
 
-    <h1>Solicitud de Cita</h1>
-
-    <div class="nuevo-tema">
-        <h2>Solicitar Cita</h2>
-        <form id="solicitudCitaForm">
-            <label for="nombre">Nombre de Usuario:</label>
-            <input type="text" id="nombre" placeholder="Ingrese su nombre" required>
-
-            <label for="asunto">Ingrese el motivo:</label>
-            <input type="text" id="asunto" placeholder="Motivo" required>
-
-            <label for="comentario">Indique su horario de preferencia:</label>
-            <textarea id="comentario" placeholder="Horario" required></textarea>
-
-            <button type="submit">Solicitar Cita</button>
-        </form>
-    </div>
-
-
-    <script src="SolicitarCita.js"></script>
-
+        <!-- Script para activar el calendario -->
+        <script>
+            $(document).ready(function () {
+                $("#preferred-date").datepicker({
+                    minDate: new Date(2023, 0, 1),
+                    maxDate: new Date(2023, 11, 31),
+                    dateFormat: 'dd-mm-yy',
+                    onSelect: function (dateText) {
+                        // Cuando el usuario selecciona una fecha, almacenarla en una variable
+                        var selectedDate = dateText;
+                        console.log(selectedDate); // Muestra la fecha seleccionada en la consola (puedes quitar esta línea)
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
 
 
 </body>

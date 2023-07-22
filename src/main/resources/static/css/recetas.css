@@ -16,6 +16,9 @@ body {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
@@ -25,10 +28,10 @@ h1 {
 
 .recipe-button {
     display: block;
-    width: 150px;
+    width: 100%;
     margin: 10px auto;
     padding: 10px;
-    background-color: #4CAF50; /* Fondo verde */
+    background-color: #8ebf3d; /* Fondo verde claro */
     color: #ffffff; /* Texto blanco */
     border: none;
     border-radius: 5px;
@@ -36,7 +39,7 @@ h1 {
 }
 
 .recipe-button:hover {
-    background-color: #45a049; /* Fondo verde oscuro al pasar el ratón */
+    background-color: #7aab34; /* Fondo verde claro al pasar el ratón */
 }
 
 .recipe-content {
@@ -48,15 +51,45 @@ h1 {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.recipe-content h2 {
+.video-section {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.video-section h2 {
+    text-align: center;
+}
+
+.video-section iframe {
+    display: block;
+    margin: 0 auto;
+}
+
+.food-list-section {
+    background-color: #8ebf3d; /* Fondo verde claro */
+    padding: 10px;
+    border-radius: 5px;
+    color: black; /* Texto blanco */
+}
+
+.food-list-section h2 {
+    text-align: center;
+}
+
+.food-list-container {
+    background-color: #ffffff; /* Fondo blanco */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.food-list-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.food-list-container li {
     margin-bottom: 10px;
-}
-
-.recipe-content h3 {
-    margin-bottom: 5px;
-}
-
-.recipe-content ul,
-.recipe-content ol {
-    margin-left: 20px;
 }

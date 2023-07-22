@@ -26,29 +26,44 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 <body "<div class="div-imagen-fondo">
+    <div class="container">
+        <h1>Foro de Comentarios</h1>
+        <div id="comment-form" class="form-container">
+            <h3>Deja tu comentario</h3>
+            <form>
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
 
-    <h1>Foro de Comentarios</h1>
+                <label for="topic">Tema:</label>
+                <input type="text" id="topic" name="topic" required>
 
-    <div class="nuevo-tema">
-        <h2>Añadir un Nuevo Tema</h2>
-        <form id="nuevoTemaForm">
-            <label for="nombre">Nombre de Usuario:</label>
-            <input type="text" id="nombre" placeholder="Ingrese su nombre" required>
+                <label for="comment">Comentario:</label>
+                <textarea id="comment" name="comment" rows="4" required></textarea>
 
-            <label for="tema">Tema:</label>
-            <input type="text" id="tema" placeholder="Ingrese el tema" required>
+                <button id="submit-btn">Enviar Comentario</button>
+            </form>
+            <div id="thank-you-message" class="thank-you-message">
+                <i class="fas fa-check-circle"></i><br>
+                <p>¡Gracias por tu comentario!</p>
+            </div>
+        </div>
 
-            <label for="comentario">Comentario:</label>
-            <textarea id="comentario" placeholder="Ingrese su comentario" required></textarea>
-
-            <button type="submit">Añadir Tema</button>
-        </form>
+        <div class="comments">
+            <!-- Aquí irían los comentarios ya enviados -->
+        </div>
     </div>
 
-    <script src="Foro.js"></script>
+    <div class="social-icons">
+        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+    </div>
 
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+    <script src="script.js" type="text/javascript"></script>
+</body>
+</html>
 
 
 </body>
-
 </html>
+
