@@ -3,13 +3,14 @@ package com.Proyecto.Proyecto.service.impl;
 import com.Proyecto.Proyecto.dao.CitaDao;
 import com.Proyecto.Proyecto.domain.Cita;
 import com.Proyecto.Proyecto.service.CitaService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class CitaServiceImpl implements CitaService {
     private final CitaDao citaDao;
 
-    // Constructor para inyectar la dependencia CitaDao
+    @Autowired// Constructor para inyectar la dependencia CitaDao
     public CitaServiceImpl(CitaDao citaDao) {
         this.citaDao = citaDao;
     }

@@ -4,7 +4,9 @@ package com.Proyecto.Proyecto.dao.impl;
 import com.Proyecto.Proyecto.dao.CitaDao;
 import com.Proyecto.Proyecto.domain.Cita;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public class CitaDaoImpl implements CitaDao {
     private final JdbcTemplate jdbcTemplate;
 

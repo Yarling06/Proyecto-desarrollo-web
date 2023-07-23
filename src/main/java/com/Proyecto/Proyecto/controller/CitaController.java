@@ -28,7 +28,7 @@ public class CitaController {
                               @RequestParam("phone") String telefono,
                               @RequestParam("specialist") String especialista,
                               // El campo de comentario es opcional, puedes agregarlo también si lo necesitas
-                              @RequestParam(value = "comment", required = false) String comentario) {
+                              @RequestParam(value = "comment") String comentario) {
         // Aquí puedes realizar validaciones adicionales antes de guardar la cita
         Cita cita = new Cita();
         cita.setId(1); // Reemplaza el valor 1 por el ID del usuario logueado, por ejemplo
