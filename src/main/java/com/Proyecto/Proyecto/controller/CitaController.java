@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class CitaController {
     private final CitaService citaService;
 
-    // Constructor para inyectar la dependencia CitaService
     public CitaController(CitaService citaService) {
         this.citaService = citaService;
     }

@@ -6,19 +6,15 @@ public class Foro {
     private String tema;
     private String comentario;
 
-    // Constructor vacío
     public Foro() {
     }
 
-    // Constructor con parámetros
     public Foro(int id, String nombre, String tema, String comentario) {
         this.id = id;
         this.nombre = nombre;
         this.tema = tema;
         this.comentario = comentario;
     }
-
-    // Getters y setters
 
     public int getId() {
         return id;
@@ -51,9 +47,6 @@ public class Foro {
     public void setComentario(String comentario) {
         this.comentario = comentario;
     }
-
-    // Método toString (opcional, para facilitar la visualización de los objetos)
-
     @Override
     public String toString() {
         return "Foro{" +
