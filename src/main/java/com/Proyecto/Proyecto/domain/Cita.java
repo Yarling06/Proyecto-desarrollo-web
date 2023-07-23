@@ -1,41 +1,72 @@
 package com.Proyecto.Proyecto.domain;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-import java.io.Serializable;
-import java.sql.Timestamp;
-import lombok.Data;
+import java.util.Date;
 
-@Data
-@Entity
-@Table(name = "cita")
-public class Cita implements Serializable {
-    
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_Cita")
+public class Cita {
     private int id_Cita;
     private int id;
     private String asunto;
     private String telefono;
     private String especialista;
-    private Timestamp fecha_hora;
+    private Date fecha_hora;
     private String comentario;
-    
-    public Cita() {
+
+    public int getId_Cita() {
+        return id_Cita;
     }
 
-    public Cita(int id, String asunto, String telefono, String especialista, Timestamp fecha_hora, String comentario) {
+    public void setId_Cita(int id_Cita) {
+        this.id_Cita = id_Cita;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
         this.id = id;
+    }
+
+    public String getAsunto() {
+        return asunto;
+    }
+
+    public void setAsunto(String asunto) {
         this.asunto = asunto;
+    }
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(String telefono) {
         this.telefono = telefono;
+    }
+
+    public String getEspecialista() {
+        return especialista;
+    }
+
+    public void setEspecialista(String especialista) {
         this.especialista = especialista;
+    }
+
+    public Date getFecha_hora() {
+        return fecha_hora;
+    }
+
+    public void setFecha_hora(Date fecha_hora) {
         this.fecha_hora = fecha_hora;
+    }
+
+    public String getComentario() {
+        return comentario;
+    }
+
+    public void setComentario(String comentario) {
         this.comentario = comentario;
     }
+
     
 }
+

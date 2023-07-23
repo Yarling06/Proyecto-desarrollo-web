@@ -5,6 +5,6 @@ import org.springframework.stereotype.Service;
 
 @Service
 public interface CitaService {
-    public void save(Cita cita);
-    
+    void guardarCita(Cita cita);
+    // Agregar aquí otros métodos de lógica de negocio relacionados con las citas médicas
 }

@@ -1,72 +1,74 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org"
-      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+      xmlns:th="http://www.thymeleaf.org">
     <head th:replace="~{layout/plantilla :: head}">
-        <title>Salud Online</title>
-    </head>
-    <body>
-        <ul class="nav-menu">
-        </ul>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                </head>
+                <body>
+                    <header th:replace="layout/plantilla :: header">
+                    </header>
+                    <link href="css/menu.css" rel="stylesheet" type="text/css"/>
+                    <link href="css/cita.css" rel="stylesheet" type="text/css"/>
+                    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+                        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                        <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+                        <title>Salud Online</title>
+                        <ul class="nav-menu">
+                            <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="index.html">Home</a></li>
+                            <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="imc.html">IMC</a></li>
+                            <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="recetas.html">Recetas Saludables</a></li>
+                            <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="ejercicios.html">Rutinas de ejercicios</a></li>
+                            <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="cita.html">Solicitar cita</a></li>
+                            <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="foro.html">Foro</a></li>
+                            <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="contacto.html">Contacto</a></li>
+                        </ul>
+                        <meta charset="UTF-8">
+                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                                </head>
 
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="card">
-                        <div class="card-header">
-                            <h4>Usuario y Comentarios</h4>
-                        </div>
-                        <div class="card-body">
-                            <form th:action="@{/cita/solicitar}" method="POST">
-                                <div class="mb-3">
-                                    <label for="usuario">Usuario</label>
-                                    <input type="text" class="form-control" name="usuario" required="true">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="comentarios">Comentarios</label>
-                                    <textarea class="form-control" name="comentarios" rows="5"></textarea>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
+                                <body "<div class="div-imagen-fondo">
+                                    <div class="container">
+                                        <h1>Solicitar Cita</h1>
+                                        <form id="appointment-form">
+                                            <div class="form-group">
+                                                <label for="name">Nombre:</label>
+                                                <input type="text" id="name" name="name" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="reason">Motivo de la cita:</label>
+                                                <input type="text" id="reason" name="reason" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="preferred-date">Fecha de preferencia:</label>
+                                                <input type="text" id="preferred-date" name="preferred-date" readonly required>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="submit" value="Solicitar Cita">
+                                            </div>
+                                        </form>
+                                    </div>
 
-                <div class="col-md-6">
-                    <div class="card">
-                        <div class="card-header">
-                            <h4>Detalles de la Cita</h4>
-                        </div>
-                        <div class="card-body">
-                            <form th:action="@{/cita/solicitar}" method="POST">
-                                <div class="mb-3">
-                                    <label for="asunto">Asunto</label>
-                                    <input type="text" class="form-control" name="asunto" required="true">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="telefono">Teléfono</label>
-                                    <input type="text" class="form-control" name="telefono" required="true">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="especialista">Especialista Disponible</label>
-                                    <select class="form-control" name="especialista">
-                                        <option value="especialista1">Especialista 1</option>
-                                        <option value="especialista2">Especialista 2</option>
-                                    </select>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="fecha">Fecha</label>
-                                    <input type="date" class="form-control" name="fecha" required="true">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="hora">Hora</label>
-                                    <input type="time" class="form-control" name="hora" required="true">
-                                </div>
-                                <button type="submit" class="btn btn-primary">Solicitar</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </body>
-</html>
+                                    <!-- Script para activar el calendario -->
+                                    <script>
+                                        $(document).ready(function () {
+                                            $("#preferred-date").datepicker({
+                                                minDate: new Date(2023, 0, 1),
+                                                maxDate: new Date(2023, 11, 31),
+                                                dateFormat: 'dd-mm-yy',
+                                                onSelect: function (dateText) {
+                                                    // Cuando el usuario selecciona una fecha, almacenarla en una variable
+                                                    var selectedDate = dateText;
+                                                    console.log(selectedDate); // Muestra la fecha seleccionada en la consola (puedes quitar esta línea)
+                                                }
+                                            });
+                                        });
+                                    </script>
+                                </body>
+                                </html>
+
+
+                                </body>
+
+                                </html>
