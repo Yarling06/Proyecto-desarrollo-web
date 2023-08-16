@@ -1,16 +1,18 @@
-
+/* Reset CSS */
 * {
     margin: 0;
-    box-sizing:  border-box;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     font-family: sans-serif;
-    padding: 45px 20px 0px;
+    padding: 45px 20px 0;
+    background-color: #f2f2f2;
 }
 
 .header {
-    background-color: red;
+    background-color: #333;
     height: 12%;
     top: 0;
     left: 0;
@@ -19,7 +21,6 @@ body {
 }
 
 .nav {
-
     display: flex;
     justify-content: space-between;
     max-width: 992px;
@@ -27,15 +28,18 @@ body {
 }
 
 .nav-link {
-    color: black;
+    color: white;
     text-decoration: none;
     font-weight: bold;
 }
 
 .nav-menu {
     display: flex;
-    margin-right: 40px;
     list-style: none;
+    margin-right: 40px;
+    background-color: black; /* Agregamos el fondo negro */
+    padding: 10px; /* Añadimos espacio entre las opciones */
+    border-radius: 10px; /* Borde redondeado */
 }
 
 .nav-menu-item {
@@ -57,7 +61,7 @@ body {
 }
 
 #contenido {
-    background-color: black ;
+    background-color: #f5f5f5;
     position: fixed;
     top: 12%;
     bottom: 8%;
@@ -69,7 +73,7 @@ body {
 }
 
 .footer {
-    background-color: black;
+    background-color: #333;
     text-align: center;
     color: white;
     height: 8%;
@@ -78,3 +82,23 @@ body {
     left: 0;
     width: 100%;
 }
+/* Agrega estas líneas en tu archivo menu.css */
+.nav {
+    display: flex;
+    align-items: center; /* Alinea verticalmente */
+    justify-content: space-between;
+    max-width: 992px;
+    margin: 0 auto;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center; /* Alinea verticalmente */
+}
+
+.nav-logo img {
+    width: 40px; /* Ajusta el tamaño del logotipo según tus necesidades */
+    height: auto;
+    margin-right: 10px;
+}
+
