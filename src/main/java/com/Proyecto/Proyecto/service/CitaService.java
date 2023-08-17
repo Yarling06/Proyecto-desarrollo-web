@@ -1,10 +1,11 @@
 package com.Proyecto.Proyecto.service;
 
 import com.Proyecto.Proyecto.domain.Cita;
+import java.util.List;
 import org.springframework.stereotype.Service;
 
 @Service
 public interface CitaService {
     void guardarCita(Cita cita);
-    // Agregar aquí otros métodos de lógica de negocio relacionados con las citas médicas
+    // Otros métodos de servicio si es necesario
 }
