@@ -1,100 +1,149 @@
-
-.div-imagen-fondo{
-    background-image: url(/imagenes/rojo.png);
-    background-size: 1500px;
+.div-imagen-fondo {
+    background-image: url(/imagenes/Cita.jpg);
+    background-size: cover;
     background-repeat: no-repeat;
-
-}
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #ff3c3c; /* Fondo rojo */
-    color: #000000; /* Texto negro */
-}
-
-/* Estilos generales */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9; /* Fondo gris claro */
-    color: black; /* Texto gris oscuro */
-}
-
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-h1 {
+    background-position: center center;
+    min-height: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    padding: 100px 0;
     margin-bottom: 20px;
 }
-
-/* Estilos para el formulario */
-#appointment-form {
-    background-color: #ffffff; /* Fondo blanco */
-    padding: 20px;
+.container {
+    max-width: 600px; /* Ajusta el ancho según lo desees */
+    margin: 0 auto;
+    background-color: #fff;
     border-radius: 5px;
+    padding: 40px; /* Ajusta el padding según lo desees */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.form-group {
+.titulo-caja {
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    opacity: 0.9;
     margin-bottom: 20px;
 }
 
 label {
-    display: block;
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  margin-bottom: 10px;
+}
+
+button {
+  margin-top: 10px;
+}
+
+#resultado {
+  margin-top: 20px;
+  font-weight: bold;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f2f2f2;
+}
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.container h1 {
+  text-align: center;
+}
+
+.container label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.container input {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.container button {
+  width: 100%;
+  padding: 8px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.container button:hover {
+  background-color: #45a049;
+}
+
+.container #resultado {
+  margin-top: 20px;
+  font-weight: bold;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    background-color: #f5f5f5;
+}
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #444;
+}
+nav ul li {
+    margin: 0 10px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: white !important; /* Cambia el color del texto a blanco */
     font-weight: bold;
-    margin-bottom: 5px;
 }
-
-input[type="text"],
-input[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-input[type="submit"] {
-    background-color: #4CAF50; /* Fondo verde */
-    color: #ffffff; /* Texto blanco */
-    cursor: pointer;
-}
-
-input[type="submit"]:hover {
-    background-color: #45a049; /* Fondo verde oscuro al pasar el ratón */
-}
-
-/* Estilos para el calendario */
-.ui-datepicker {
-    font-size: 12px;
-}
-
-.ui-datepicker-header {
-    background-color: #4CAF50; /* Fondo verde */
-    color: #ffffff; /* Texto blanco */
-    font-weight: bold;
-}
-
-.ui-datepicker-calendar td {
-    padding: 5px;
-}
-
-.ui-datepicker-calendar td a {
-    display: block;
+.content-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
     text-align: center;
-    padding: 5px;
-    border-radius: 3px;
-    color: #333333; /* Texto gris oscuro */
+    margin-top: 20px; 
 }
-
-.ui-datepicker-calendar td a:hover {
-    background-color: #f9f9f9; /* Fondo gris claro al pasar el ratón */
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
 }
-
-
-
+p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+ul {
+    font-size: 18px;
+    list-style-type: disc;
+    margin-left: 20px;
+}
