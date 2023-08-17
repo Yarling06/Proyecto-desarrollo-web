@@ -1,33 +1,33 @@
 package com.Proyecto.Proyecto.controller;
 
+import com.Proyecto.Proyecto.dao.ForoDao;
 import com.Proyecto.Proyecto.domain.Foro;
-import com.Proyecto.Proyecto.service.ForoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import java.util.List;
 
 @Controller
-@RequestMapping("/foro")
 public class ForoController {
 
-    private final ForoService foroService;
-
     @Autowired
-    public ForoController(ForoService foroService) {
-        this.foroService = foroService;
-    }
+    private ForoDao foroDao;
 
-    @GetMapping("/")
+    @GetMapping("/foro")
     public String mostrarForo(Model model) {
-        model.addAttribute("comentarios", foroService.obtenerTodosLosComentarios());
-        return "foro";
+        List<Foro> comentarios = foroDao.findAll();
+        model.addAttribute("comentarios", comentarios);
+        model.addAttribute("nuevoComentario", new Foro());
+        return "foro"; // La vista Thymeleaf que muestra la tabla y el formulario
     }
 
-    @PostMapping("?") //HAY QUE CREAR UNO, PERO ES UNA IDEA
-    public String agregarComentario(@ModelAttribute Foro foro) {
-        foroService.guardarComentario(foro);
-        return "redirect:/foro/";
+    @PostMapping("/foro/agregar")
+    public String agregarComentario(@ModelAttribute Foro nuevoComentario) {
+        foroDao.save(nuevoComentario);
+        return "redirect:/foro"; // Redirigir de nuevo a la página del foro
     }
 }
-

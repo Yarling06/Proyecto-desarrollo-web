@@ -1,10 +1,10 @@
-package com.Proyecto.Proyecto.service.impl;
+package com.Proyecto.Proyecto.service;
 
 import com.Proyecto.Proyecto.dao.ForoDao;
 import com.Proyecto.Proyecto.domain.Foro;
-import com.Proyecto.Proyecto.service.ForoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import java.util.List;
 
 @Service
@@ -18,12 +18,13 @@ public class ForoServiceImpl implements ForoService {
     }
 
     @Override
-    public void guardarComentario(Foro foro) {
-        foroDao.guardarComentario(foro);
+    public List<Foro> getAllComentarios() {
+        return foroDao.findAll();
     }
 
     @Override
-    public List<Foro> obtenerTodosLosComentarios() {
-        return foroDao.obtenerTodosLosComentarios();
+    public void agregarComentario(Foro comentario) {
+        foroDao.save(comentario);
     }
 }
+

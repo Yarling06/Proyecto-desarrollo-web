@@ -1,6 +1,14 @@
 package com.Proyecto.Proyecto.domain;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class Foro {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String nombre;
     private String tema;
@@ -9,8 +17,7 @@ public class Foro {
     public Foro() {
     }
 
-    public Foro(int id, String nombre, String tema, String comentario) {
-        this.id = id;
+    public Foro(String nombre, String tema, String comentario) {
         this.nombre = nombre;
         this.tema = tema;
         this.comentario = comentario;
@@ -47,6 +54,7 @@ public class Foro {
     public void setComentario(String comentario) {
         this.comentario = comentario;
     }
+
     @Override
     public String toString() {
         return "Foro{" +
@@ -57,3 +65,4 @@ public class Foro {
                 '}';
     }
 }
+

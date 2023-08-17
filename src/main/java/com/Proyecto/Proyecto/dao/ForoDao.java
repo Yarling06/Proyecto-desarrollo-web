@@ -1,9 +1,8 @@
 package com.Proyecto.Proyecto.dao;
 
 import com.Proyecto.Proyecto.domain.Foro;
-import java.util.List;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface ForoDao {
-    void guardarComentario(Foro foro);
-    List<Foro> obtenerTodosLosComentarios();
+public interface ForoDao extends JpaRepository<Foro, Integer> {
+    // Puedes agregar métodos de consulta personalizados si es necesario
 }

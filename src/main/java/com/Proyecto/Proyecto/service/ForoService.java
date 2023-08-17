@@ -1,11 +1,12 @@
 package com.Proyecto.Proyecto.service;
 
 import com.Proyecto.Proyecto.domain.Foro;
+
 import java.util.List;
 
 public interface ForoService {
-
-    void guardarComentario(Foro foro);
-
-    List<Foro> obtenerTodosLosComentarios();
+    List<Foro> getAllComentarios();
+    void agregarComentario(Foro comentario);
+    // Puedes agregar otros métodos según tus necesidades
 }
+
