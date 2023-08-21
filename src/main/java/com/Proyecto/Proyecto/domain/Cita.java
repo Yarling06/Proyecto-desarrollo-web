@@ -1,30 +1,30 @@
 package com.Proyecto.Proyecto.domain;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
 import java.util.Date;
 
-@Entity
-@Table(name = "solicitarcita")
 public class Cita {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idCita;
+    private int id_Cita;
+    private int id;
     private String asunto;
     private String telefono;
     private String especialista;
-    private Date fechaCita;
+    private Date fecha_hora;
     private String comentario;
 
-    public int getIdCita() {
-        return idCita;
+    public int getId_Cita() {
+        return id_Cita;
     }
 
-    public void setIdCita(int idCita) {
-        this.idCita = idCita;
+    public void setId_Cita(int id_Cita) {
+        this.id_Cita = id_Cita;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getAsunto() {
@@ -51,12 +51,12 @@ public class Cita {
         this.especialista = especialista;
     }
 
-    public Date getFechaCita() {
-        return fechaCita;
+    public Date getFecha_hora() {
+        return fecha_hora;
     }
 
-    public void setFechaCita(Date fechaCita) {
-        this.fechaCita = fechaCita;
+    public void setFecha_hora(Date fecha_hora) {
+        this.fecha_hora = fecha_hora;
     }
 
     public String getComentario() {
@@ -67,15 +67,6 @@ public class Cita {
         this.comentario = comentario;
     }
 
-    @Override
-    public String toString() {
-        return "Cita{" +
-                "idCita=" + idCita +
-                ", asunto='" + asunto + '\'' +
-                ", telefono='" + telefono + '\'' +
-                ", especialista='" + especialista + '\'' +
-                ", fechaCita='" + fechaCita + '\'' +
-                ", comentario='" + comentario + '\'' +
-                '}';
-    }
+    
 }
+

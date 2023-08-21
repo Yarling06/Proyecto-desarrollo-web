@@ -32,7 +32,7 @@
         <section class="div-imagen-fondo">
             <div class="container">
                 <h1>Solicitar Cita</h1>
-                <form id="appointment-form" action="/guardar-cita" method="post">
+                <form id="appointment-form">
                     <div class="form-group">
                         <label for="name">Nombre:</label>
                         <input type="text" id="name" name="name" required>
@@ -51,36 +51,17 @@
                 </form>
             </div>
 
-            <!-- Script para enviar la solicitud de cita -->
+            <!-- Script para activar el calendario -->
             <script>
                 $(document).ready(function () {
-                    $("#appointment-form").submit(function (event) {
-                        event.preventDefault();
-
-                        const nombre = $("#name").val();
-                        const motivo = $("#reason").val();
-                        const fechaPreferencia = $("#preferred-date").val();
-
-                        const citaData = {
-                            name: nombre,
-                            reason: motivo,
-                            "preferred-date": fechaPreferencia
-                                    // Agregar más campos si es necesario
-                        };
-
-                        $.post("/guardar-cita", citaData, function (response) {
-                            console.log(response);
-                            // Puedes redirigir a una página de confirmación o realizar otras acciones
-                        });
-                    });
-
                     $("#preferred-date").datepicker({
                         minDate: new Date(2023, 0, 1),
                         maxDate: new Date(2023, 11, 31),
                         dateFormat: 'dd-mm-yy',
                         onSelect: function (dateText) {
+                            // Cuando el usuario selecciona una fecha, almacenarla en una variable
                             var selectedDate = dateText;
-                            console.log(selectedDate);
+                            console.log(selectedDate); // Muestra la fecha seleccionada en la consola (puedes quitar esta línea)
                         }
                     });
                 });
