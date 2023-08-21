@@ -148,25 +148,41 @@ ul {
     margin-left: 20px;
 }
 
-
-
-/* Estilos para los nuevos comentarios */
 .added-comment {
-    background-color: #f2f2f2;
-    border: 1px solid #ddd;
-    padding: 10px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
-    margin-bottom: 20px; /* Agregado para separar comentarios */
+    margin-bottom: 20px;
+}
+.comments h2 {
+    font-size: 24px;
+    color: #333333;
+    margin-bottom: 15px;
+}
+.social-icons a {
+    color: #333333;
+    margin-right: 15px;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #007bff;
 }
 
 .added-comment .comment-header {
     font-weight: bold;
+    color: #333333;
     margin-bottom: 5px;
 }
 
 .added-comment .comment-body {
-    margin-top: 5px;
+    margin-top: 10px;
+    color: #555555;
+    line-height: 1.5;
 }
 
 /* Estilos generales */
@@ -185,4 +201,4 @@ ul {
     text-align: center;
 }
 
-/* Resto de tus estilos... */
+
