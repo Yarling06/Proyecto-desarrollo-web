@@ -1,30 +1,38 @@
 package com.Proyecto.Proyecto.domain;
 
-import java.util.Date;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import java.io.Serializable;
+import lombok.Data;
 
-public class Cita {
-    private int id_Cita;
-    private int id;
+@Data
+@Entity
+@Table (name=" solicitarcita")
+public class Cita implements Serializable {
+    
+    private static final long  serialVersionUID = 1l;
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column (name ="id_cita")
+    private int idCita;
     private String asunto;
     private String telefono;
     private String especialista;
-    private Date fecha_hora;
+    private  String fecha_cita;
     private String comentario;
 
-    public int getId_Cita() {
-        return id_Cita;
-    }
-
-    public void setId_Cita(int id_Cita) {
-        this.id_Cita = id_Cita;
-    }
 
     public int getId() {
-        return id;
+        return idCita;
     }
 
     public void setId(int id) {
-        this.id = id;
+        this.idCita = id;
     }
 
     public String getAsunto() {
@@ -51,12 +59,12 @@ public class Cita {
         this.especialista = especialista;
     }
 
-    public Date getFecha_hora() {
-        return fecha_hora;
+    public String getFecha_cita() {
+        return fecha_cita;
     }
 
-    public void setFecha_hora(Date fecha_hora) {
-        this.fecha_hora = fecha_hora;
+    public void setFecha_cita(String fecha_cita) {
+        this.fecha_cita= fecha_cita;
     }
 
     public String getComentario() {
@@ -66,7 +74,15 @@ public class Cita {
     public void setComentario(String comentario) {
         this.comentario = comentario;
     }
-
-    
+@Override
+    public String toString() {
+        return "Cita{" +
+                "idCita=" + idCita +
+                ", asunto='" + asunto + '\'' +
+                ", telefono='" + telefono+ '\'' +
+                ", especialista='" + especialista + '\'' +
+                 ", fecha_cita='" + fecha_cita+ '\'' +
+                 ", comentario='" + comentario + '\'' +
+                '}';
 }
-
+}

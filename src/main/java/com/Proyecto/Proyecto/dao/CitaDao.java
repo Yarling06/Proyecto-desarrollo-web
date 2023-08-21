@@ -2,10 +2,8 @@ package com.Proyecto.Proyecto.dao;
 
 
 import com.Proyecto.Proyecto.domain.Cita;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface CitaDao {
-    void guardarCita(Cita cita);
-    // Agregar aquí otros métodos de consulta o actualización de la base de datos
+public interface CitaDao extends JpaRepository<Cita, Long> {
+    // Aquí puedes agregar métodos personalizados si los necesitas
 }
-
-
