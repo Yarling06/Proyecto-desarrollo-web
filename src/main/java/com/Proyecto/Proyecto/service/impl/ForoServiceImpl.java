@@ -1,7 +1,8 @@
-package com.Proyecto.Proyecto.service;
+package com.Proyecto.Proyecto.service.impl;
 
 import com.Proyecto.Proyecto.dao.ForoDao;
 import com.Proyecto.Proyecto.domain.Foro;
+import com.Proyecto.Proyecto.service.ForoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
