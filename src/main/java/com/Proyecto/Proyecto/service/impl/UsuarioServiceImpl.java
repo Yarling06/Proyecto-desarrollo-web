@@ -54,19 +54,7 @@ public class UsuarioServiceImpl implements UsuarioService, UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        Usuario usuario = usuarioDao.findByNombre(username);
-
-        if (usuario == null) {
-            throw new UsernameNotFoundException(username);
-        }
-
-        var roles = new ArrayList<GrantedAuthority>();
-
-        for (Rol rol : usuario.getRoles()) {
-            roles.add(new SimpleGrantedAuthority(rol.getNombre()));
-        }
-
-        return new User(usuario.getNombre(), usuario.getContraseña(), roles);
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }
 
