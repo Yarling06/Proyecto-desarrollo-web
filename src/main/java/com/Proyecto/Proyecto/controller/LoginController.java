@@ -10,7 +10,7 @@ public class LoginController {
 
     @GetMapping("/login")
     public String showLoginForm() {
-        return "login"; // Return the name of your login template (login.html)
+        return "login";
     }
 }
 
